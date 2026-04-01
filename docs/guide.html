@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiverr Gig Optimizer — Complete Setup Guide</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #fafafa;
+  --text: #1a1a2e;
+  --muted: #64748b;
+  --green: #1DBF73;
+  --green-bg: #ecfdf5;
+  --green-border: #a7f3d0;
+  --purple: #7c3aed;
+  --purple-bg: #f5f3ff;
+  --purple-border: #c4b5fd;
+  --blue: #2563eb;
+  --blue-bg: #eff6ff;
+  --blue-border: #93c5fd;
+  --red: #dc2626;
+  --red-bg: #fef2f2;
+  --red-border: #fecaca;
+  --gold: #d97706;
+  --gold-bg: #fffbeb;
+  --gold-border: #fde68a;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --code-bg: #1e293b;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 48px;
+  background: white;
+  min-height: 100vh;
+}
+
+/* ─── Cover Page ─── */
+.cover {
+  text-align: center;
+  padding: 80px 20px 60px;
+  border-bottom: 3px solid var(--green);
+  margin-bottom: 48px;
+  page-break-after: always;
+}
+
+.cover-badge {
+  display: inline-block;
+  padding: 6px 20px;
+  background: var(--green-bg);
+  border: 1px solid var(--green-border);
+  border-radius: 24px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--green);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.cover h1 {
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.cover h1 span { color: var(--green); }
+
+.cover .subtitle {
+  font-size: 18px;
+  color: var(--muted);
+  font-weight: 400;
+  margin-bottom: 40px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cover-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.cover-stat {
+  text-align: center;
+}
+
+.cover-stat .num {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--green);
+}
+
+.cover-stat .label {
+  font-size: 10px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+.repo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: var(--text);
+  color: white;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 16px;
+  transition: background .2s;
+}
+
+.repo-link:hover { background: #0f172a; }
+
+.repo-url {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+/* ─── Section Styles ─── */
+h2 {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin: 48px 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border);
+  page-break-after: avoid;
+}
+
+h2 .step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: var(--green);
+  color: white;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: 800;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 24px 0 10px;
+  color: var(--purple);
+}
+
+p {
+  margin-bottom: 14px;
+  color: #374151;
+}
+
+/* ─── Code Blocks ─── */
+pre {
+  background: var(--code-bg);
+  color: #e2e8f0;
+  padding: 18px 22px;
+  border-radius: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-x: auto;
+  margin: 14px 0 20px;
+  page-break-inside: avoid;
+}
+
+code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  background: #f1f5f9;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--purple);
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+/* ─── Info Boxes ─── */
+.box {
+  padding: 18px 22px;
+  border-radius: 10px;
+  margin: 16px 0 20px;
+  page-break-inside: avoid;
+}
+
+.box-green { background: var(--green-bg); border-left: 4px solid var(--green); }
+.box-purple { background: var(--purple-bg); border-left: 4px solid var(--purple); }
+.box-blue { background: var(--blue-bg); border-left: 4px solid var(--blue); }
+.box-red { background: var(--red-bg); border-left: 4px solid var(--red); }
+.box-gold { background: var(--gold-bg); border-left: 4px solid var(--gold); }
+
+.box strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  margin-bottom: 6px;
+}
+
+.box-green strong { color: var(--green); }
+.box-purple strong { color: var(--purple); }
+.box-blue strong { color: var(--blue); }
+.box-red strong { color: var(--red); }
+.box-gold strong { color: var(--gold); }
+
+/* ─── Lists ─── */
+ul, ol {
+  padding-left: 24px;
+  margin-bottom: 16px;
+}
+
+li {
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+li strong { color: var(--text); }
+
+/* ─── Table ─── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0 24px;
+  font-size: 13px;
+  page-break-inside: avoid;
+}
+
+th {
+  background: #f8fafc;
+  font-weight: 700;
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 2px solid var(--border);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: var(--muted);
+}
+
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  color: #374151;
+}
+
+tr:hover td { background: #fafafa; }
+
+/* ─── Checklist ─── */
+.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+.checklist li {
+  padding: 8px 0 8px 32px;
+  position: relative;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.checklist li::before {
+  content: '☐';
+  position: absolute;
+  left: 4px;
+  font-size: 16px;
+  color: var(--green);
+}
+
+/* ─── Diagram ─── */
+.diagram {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px;
+  margin: 16px 0 24px;
+  text-align: center;
+  page-break-inside: avoid;
+}
+
+.diagram pre {
+  background: transparent;
+  color: var(--text);
+  text-align: center;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+}
+
+/* ─── Print Styles ─── */
+@media print {
+  body { background: white; font-size: 12px; }
+  .page { padding: 24px 36px; max-width: none; }
+  .cover { padding: 60px 20px 40px; }
+  .cover h1 { font-size: 36px; }
+  .repo-link { background: white; color: var(--text); border: 2px solid var(--text); }
+  pre { font-size: 11px; padding: 12px 16px; }
+  h2 { margin-top: 36px; }
+  .no-print { display: none !important; }
+  a { color: var(--blue); text-decoration: none; }
+  a::after { content: none; }
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .page { padding: 24px 20px; }
+  .cover h1 { font-size: 28px; }
+  .cover-stats { gap: 20px; }
+  .cover-stat .num { font-size: 22px; }
+}
+
+.print-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 14px 28px;
+  background: var(--green);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(29,191,115,.3);
+  z-index: 100;
+  transition: all .2s;
+}
+
+.print-btn:hover { background: #19a864; transform: translateY(-1px); }
+
+.footer {
+  text-align: center;
+  padding: 32px 20px;
+  border-top: 2px solid var(--border);
+  margin-top: 48px;
+  color: var(--muted);
+  font-size: 12px;
+}
+</style>
+</head>
+<body>
+<button class="print-btn no-print" onclick="window.print()">Save as PDF</button>
+
+<div class="page">
+
+<!-- ═══════════════ COVER PAGE ═══════════════ -->
+<div class="cover">
+  <div class="cover-badge">Open Source Claude Code Skill</div>
+  <h1>Fiverr Gig <span>Optimizer</span></h1>
+  <p class="subtitle">The complete guide to generating research-backed Fiverr gig strategies using AI. From zero to optimized catalog in 15 minutes.</p>
+
+  <div class="cover-stats">
+    <div class="cover-stat">
+      <div class="num">15min</div>
+      <div class="label">Setup Time</div>
+    </div>
+    <div class="cover-stat">
+      <div class="num">9+</div>
+      <div class="label">Optimized Gigs</div>
+    </div>
+    <div class="cover-stat">
+      <div class="num">25-40%</div>
+      <div class="label">Higher CTR</div>
+    </div>
+  </div>
+
+  <a href="https://github.com/waseemnasir2k26/fiverr-gig-optimizer" class="repo-link">
+    Get Started on GitHub
+  </a>
+  <div class="repo-url">github.com/waseemnasir2k26/fiverr-gig-optimizer</div>
+</div>
+
+<!-- ═══════════════ WHAT IS THIS? ═══════════════ -->
+<h2>What Is This?</h2>
+
+<p>The <strong>Fiverr Gig Optimizer</strong> is a free, open-source tool that uses Claude AI to generate a complete Fiverr gig strategy for you. Instead of guessing at titles, descriptions, and pricing, you tell Claude your services and it:</p>
+
+<ol>
+  <li><strong>Researches Fiverr competition</strong> for your keywords</li>
+  <li><strong>Finds combo-niche gaps</strong> — keyword combinations with 10-100x less competition</li>
+  <li><strong>Generates optimized gig titles</strong> under 80 characters</li>
+  <li><strong>Writes high-converting descriptions</strong> with cross-sell callouts</li>
+  <li><strong>Creates professional thumbnails</strong> with your photo (1280x769px)</li>
+  <li><strong>Designs 3-tier pricing</strong> (Basic / Standard / Premium)</li>
+  <li><strong>Plans a phase-based rollout</strong> so you don't overwhelm yourself</li>
+  <li><strong>Maps cross-sell funnels</strong> so every gig leads to the next</li>
+</ol>
+
+<div class="box box-green">
+  <strong>The Result</strong>
+  A single HTML file you open in your browser with everything copy-paste ready. Download thumbnails, copy titles, descriptions, and tags — then create your gigs on Fiverr in minutes.
+</div>
+
+<!-- ═══════════════ PREREQUISITES ═══════════════ -->
+<h2><span class="step-num">0</span> Prerequisites</h2>
+
+<p>Before starting, make sure you have:</p>
+
+<ul class="checklist">
+  <li><strong>Claude Code</strong> — Install from <code>claude.ai/code</code> (free tier works)</li>
+  <li><strong>Python 3.8+</strong> — Check with <code>python --version</code></li>
+  <li><strong>Git</strong> — Check with <code>git --version</code></li>
+  <li><strong>A professional photo</strong> — Headshot, PNG or JPG, minimum 500x500px. Photos in thumbnails get 25-40% higher click rates.</li>
+  <li><strong>A Fiverr account</strong> — Free to create at fiverr.com</li>
+</ul>
+
+<div class="box box-gold">
+  <strong>No Photo? No Problem</strong>
+  The tool works without a photo too — it'll generate thumbnails with a stylish gradient placeholder instead. But we strongly recommend adding your face for better CTR.
+</div>
+
+<!-- ═══════════════ STEP 1: CLONE ═══════════════ -->
+<h2><span class="step-num">1</span> Clone the Repository</h2>
+
+<p>Open your terminal and run:</p>
+
+<pre><code>git clone https://github.com/waseemnasir2k26/fiverr-gig-optimizer.git
+cd fiverr-gig-optimizer</code></pre>
+
+<p>Place your professional headshot photo in this folder. Name it <code>photo.png</code> (or any name — you'll tell Claude where it is).</p>
+
+<!-- ═══════════════ STEP 2: RUN ═══════════════ -->
+<h2><span class="step-num">2</span> Run the Optimizer</h2>
+
+<p>Open Claude Code in the repo directory:</p>
+
+<pre><code>claude</code></pre>
+
+<p>Then type the slash command:</p>
+
+<pre><code>/fiverr-optimize</code></pre>
+
+<p>Claude will ask you a series of questions:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Example Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Your name</td>
+      <td>Jane Smith</td>
+    </tr>
+    <tr>
+      <td>Brand name (optional)</td>
+      <td>Digital Spark Agency</td>
+    </tr>
+    <tr>
+      <td>Website (optional)</td>
+      <td>digitalspark.io</td>
+    </tr>
+    <tr>
+      <td>Your services</td>
+      <td>n8n automation, WordPress sites, AI chatbots, GoHighLevel CRM, voice agents, SEO</td>
+    </tr>
+    <tr>
+      <td>Photo path</td>
+      <td>photo.png</td>
+    </tr>
+    <tr>
+      <td>Current Fiverr gigs</td>
+      <td>fiverr.com/my-gig-1, fiverr.com/my-gig-2 (or "none")</td>
+    </tr>
+    <tr>
+      <td>Monthly goal</td>
+      <td>$5,000</td>
+    </tr>
+    <tr>
+      <td>Seller level</td>
+      <td>New seller</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="box box-purple">
+  <strong>Pro Tip: List EVERY Skill</strong>
+  The more services you list, the more combo-niche opportunities Claude can find. "WordPress + AI" has way less competition than just "WordPress." Don't hold back — list everything.
+</div>
+
+<!-- ═══════════════ STEP 3: REVIEW ═══════════════ -->
+<h2><span class="step-num">3</span> Review Your Strategy</h2>
+
+<p>Claude generates two files:</p>
+
+<ol>
+  <li><code>gig-config.json</code> — All your gig data (titles, descriptions, tags, pricing, thumbnail settings)</li>
+  <li><code>fiverr-catalog.html</code> — The visual catalog with everything rendered</li>
+</ol>
+
+<p>Open the catalog in your browser:</p>
+
+<pre><code># Windows
+start fiverr-catalog.html
+
+# Mac
+open fiverr-catalog.html
+
+# Linux
+xdg-open fiverr-catalog.html</code></pre>
+
+<p>You'll see a dark, professional dashboard with:</p>
+
+<ul>
+  <li><strong>Phase-based gig cards</strong> — Each gig with its thumbnail, title, description, tags, and pricing</li>
+  <li><strong>Cross-sell funnel diagram</strong> — Visual map of how gigs connect</li>
+  <li><strong>Competition data</strong> — How many competitors each gig faces</li>
+  <li><strong>Action plan</strong> — Week-by-week checklist</li>
+</ul>
+
+<!-- ═══════════════ STEP 4: CREATE GIGS ═══════════════ -->
+<h2><span class="step-num">4</span> Create Your Fiverr Gigs</h2>
+
+<p>For each Phase 1 gig in the catalog:</p>
+
+<h3>4a. Download the Thumbnail</h3>
+<p>Click the <strong>"PNG"</strong> button on the gig card. This downloads a 1280x769px thumbnail — the exact size Fiverr recommends.</p>
+
+<h3>4b. Copy the Title</h3>
+<p>Click <strong>"Copy Title"</strong>. Paste it into Fiverr's title field. The character count is shown — make sure it's under 80.</p>
+
+<h3>4c. Copy the Description</h3>
+<p>Click <strong>"Copy Desc"</strong>. Paste into Fiverr's description field. It's pre-formatted with bullet points and cross-sell callouts.</p>
+
+<h3>4d. Copy the Tags</h3>
+<p>Click <strong>"Copy Tags"</strong>. Paste into Fiverr's search tags. Exactly 5 tags per gig (Fiverr's limit).</p>
+
+<h3>4e. Set Pricing</h3>
+<p>Match the 3-tier pricing from the catalog:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tier</th>
+      <th>Purpose</th>
+      <th>Strategy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Basic</strong></td>
+      <td>Gets the click</td>
+      <td>Low enough to attract browsers. This is your foot-in-the-door.</td>
+    </tr>
+    <tr>
+      <td><strong>Standard</strong></td>
+      <td>Where money is made</td>
+      <td>Marked as "POPULAR" — most buyers choose this. Best value proposition.</td>
+    </tr>
+    <tr>
+      <td><strong>Premium</strong></td>
+      <td>Anchor price</td>
+      <td>Makes Standard look reasonable. Some buyers actually pick this too.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="box box-red">
+  <strong>Critical: Phase 1 First</strong>
+  Only create Phase 1 gigs initially. Bad gigs drag down good gigs in Fiverr's algorithm. Wait until you have 5+ reviews before adding Phase 2 gigs. This is not optional — it's how the algorithm works.
+</div>
+
+<!-- ═══════════════ STEP 5: OPTIMIZE ═══════════════ -->
+<h2><span class="step-num">5</span> Post-Launch Optimization</h2>
+
+<p>Follow this timeline after creating your gigs:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>When</th>
+      <th>Action</th>
+      <th>Why</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Day 1</strong></td>
+      <td>Create Phase 1 gigs</td>
+      <td>Fiverr boosts new gigs in first 2 weeks</td>
+    </tr>
+    <tr>
+      <td><strong>Daily</strong></td>
+      <td>Respond to ALL messages within 1 hour</td>
+      <td>Response time is a top algorithm signal</td>
+    </tr>
+    <tr>
+      <td><strong>Daily</strong></td>
+      <td>Send 10 buyer requests</td>
+      <td>Fastest way to get first orders</td>
+    </tr>
+    <tr>
+      <td><strong>Week 2</strong></td>
+      <td>Offer launch pricing to first 5 buyers</td>
+      <td>5 reviews = algorithm visibility threshold</td>
+    </tr>
+    <tr>
+      <td><strong>Week 3-4</strong></td>
+      <td>Add gig video (60-90 seconds)</td>
+      <td>+30% impressions, 2x more orders</td>
+    </tr>
+    <tr>
+      <td><strong>Week 6+</strong></td>
+      <td>Launch Phase 2 gigs</td>
+      <td>You have reviews — now add premium upsells</td>
+    </tr>
+    <tr>
+      <td><strong>Level 2+</strong></td>
+      <td>Launch Phase 3 gigs</td>
+      <td>Expand based on what's selling</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ═══════════════ ALGORITHM INSIGHTS ═══════════════ -->
+<h2>Fiverr Algorithm — What Actually Matters</h2>
+
+<p>Based on research across thousands of top-performing gigs:</p>
+
+<div class="box box-green">
+  <strong>DO (Algorithm Boosters)</strong>
+  <ul style="margin-top:8px;margin-bottom:0">
+    <li>Respond to every message within 1 hour</li>
+    <li>Use combo-niche keywords (2 skills combined = less competition)</li>
+    <li>Put your face in thumbnails (25-40% higher CTR)</li>
+    <li>Use dark backgrounds with bright accent colors</li>
+    <li>Keep 3-4 gigs in the same category (traffic sharing)</li>
+    <li>Get 5 reviews as fast as possible (visibility threshold)</li>
+    <li>Add gig FAQ section (converts browsers to buyers)</li>
+    <li>Cross-sell in every gig description</li>
+  </ul>
+</div>
+
+<div class="box box-red">
+  <strong>DON'T (Algorithm Killers)</strong>
+  <ul style="margin-top:8px;margin-bottom:0">
+    <li>Don't create gigs you can't deliver well — bad reviews kill everything</li>
+    <li>Don't scatter across unrelated categories</li>
+    <li>Don't compete on generic keywords ("website developer" = 100K+ gigs)</li>
+    <li>Don't set prices too low — it signals low quality</li>
+    <li>Don't ignore messages for hours — response time is tracked</li>
+    <li>Don't launch all gigs at once — phase them</li>
+  </ul>
+</div>
+
+<!-- ═══════════════ MANUAL MODE ═══════════════ -->
+<h2>Manual Mode (Without Claude Code)</h2>
+
+<p>If you don't have Claude Code, you can still use this tool manually:</p>
+
+<ol>
+  <li>Clone the repo: <code>git clone https://github.com/waseemnasir2k26/fiverr-gig-optimizer.git</code></li>
+  <li>Copy <code>config-example.json</code> to <code>gig-config.json</code></li>
+  <li>Edit <code>gig-config.json</code> with your gig details (follow the structure exactly)</li>
+  <li>Place your photo in the repo folder</li>
+  <li>Run: <code>python build-catalog.py</code></li>
+  <li>Open <code>fiverr-catalog.html</code> in your browser</li>
+</ol>
+
+<div class="box box-blue">
+  <strong>Config Structure</strong>
+  Each gig in the config needs: id, phase, title, category, 5 tags, description (under 1200 chars), competition level, cross-sell text, 3-tier pricing with deliverables, and thumbnail settings (colors, headline, subtitle, badge, tool pills).
+  See <code>config-example.json</code> in the repo for the full format.
+</div>
+
+<!-- ═══════════════ COMBO-NICHE EXAMPLES ═══════════════ -->
+<h2>Combo-Niche Strategy — Examples</h2>
+
+<p>The secret sauce: instead of competing on broad keywords, combine two skills into a unique offering.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Broad Keyword</th>
+      <th>Competition</th>
+      <th>Combo-Niche</th>
+      <th>Competition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>chatbot</td>
+      <td>10,000+</td>
+      <td>vapi + n8n voice agent</td>
+      <td>~24</td>
+    </tr>
+    <tr>
+      <td>WordPress</td>
+      <td>100,000+</td>
+      <td>WordPress + AI vibe coding</td>
+      <td>~24</td>
+    </tr>
+    <tr>
+      <td>CRM setup</td>
+      <td>5,000+</td>
+      <td>GoHighLevel + AI + n8n</td>
+      <td>~24</td>
+    </tr>
+    <tr>
+      <td>automation</td>
+      <td>50,000+</td>
+      <td>n8n + AI agents</td>
+      <td>~200</td>
+    </tr>
+    <tr>
+      <td>SEO</td>
+      <td>100,000+</td>
+      <td>GEO/AEO AI search optimization</td>
+      <td>~400</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The optimizer finds these combos automatically based on your specific skills.</p>
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+<h2>Frequently Asked Questions</h2>
+
+<h3>How many gigs should I create?</h3>
+<p>Start with 3-4 gigs in Phase 1, all in the same Fiverr category. This concentrates your traffic signals. Add more only after getting 5+ reviews on existing gigs.</p>
+
+<h3>What if I only have 1-2 skills?</h3>
+<p>You can still create 3-4 gigs by varying the scope: a basic version, a premium version, a bundle, and a specific use-case version. The optimizer handles this.</p>
+
+<h3>How long until I see results?</h3>
+<p>Fiverr boosts new gigs for 2 weeks. If you respond fast and get 5 reviews quickly (offer launch pricing), most sellers see consistent orders by week 4-6.</p>
+
+<h3>Can I edit the catalog after generating it?</h3>
+<p>Yes! Edit <code>gig-config.json</code> and re-run <code>python build-catalog.py</code>. Or run <code>/fiverr-optimize</code> again in Claude Code to regenerate from scratch.</p>
+
+<h3>Does this cost anything?</h3>
+<p>The tool is 100% free and open source. You only need a Claude Code account (free tier works) and a Fiverr account.</p>
+
+<h3>Can I use this for Upwork too?</h3>
+<p>The strategy applies to any freelance platform. The thumbnails and HTML catalog are Fiverr-specific (1280x769px), but the titles, descriptions, and pricing strategy work anywhere.</p>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<div class="footer">
+  <p><strong>Fiverr Gig Optimizer</strong> — Open Source Claude Code Skill</p>
+  <p style="margin-top:6px">github.com/waseemnasir2k26/fiverr-gig-optimizer</p>
+  <p style="margin-top:6px">Built by Waseem Nasir (Skynet Labs) &middot; skynetjoe.com</p>
+  <p style="margin-top:12px;font-size:11px;color:#94a3b8">Print this page (Ctrl+P / Cmd+P) to save as PDF</p>
+</div>
+
+</div>
+</body>
+</html>

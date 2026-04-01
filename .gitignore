@@ -1,0 +1,26 @@
+# Generated output
+fiverr-catalog.html
+gig-config.json
+
+# User photos (don't commit personal photos)
+*.png
+*.jpg
+*.jpeg
+!examples/*.png
+
+# Base64 files
+*.b64
+*-b64.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/

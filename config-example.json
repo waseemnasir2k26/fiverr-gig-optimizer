@@ -1,0 +1,65 @@
+{
+  "seller": {
+    "name": "Jane Smith",
+    "brand": "Digital Spark Agency",
+    "website": "digitalspark.io",
+    "photo": "photo.png"
+  },
+  "strategy": {
+    "totalGigs": 7,
+    "phase1Count": 4,
+    "phase2Count": 2,
+    "phase3Count": 1,
+    "monthlyTarget": "$8,000",
+    "primaryCategory": "Programming & Tech"
+  },
+  "gigs": [
+    {
+      "id": 1,
+      "phase": 1,
+      "title": "I will build n8n automations with ai to connect your business tools",
+      "cat": "Programming & Tech > AI Coding",
+      "tags": ["n8n automation", "ai automation", "workflow automation", "n8n developer", "business automation"],
+      "desc": "I build custom n8n automation systems that connect your tools, process data with AI, and run your operations on autopilot.\n\nWhat I automate:\n\u2022 Lead capture to CRM pipeline\n\u2022 Email and SMS follow-up sequences\n\u2022 Data sync between apps\n\u2022 AI-powered data processing and summaries\n\u2022 Webhook triggers and API chains\n\nEvery workflow is built, tested, and documented with a video walkthrough.\n\n\u2794 Also check my AI Chatbot gig\n\u2794 Need everything? See my AI Bundle gig\n\nMessage me your current process. I will map your automation in my first reply.",
+      "competition": "~24 gigs (LOW)",
+      "compCls": "lo",
+      "xsell": "CROSS-SELLS TO: Gig #2 (AI Chatbot) \u2022 Gig #5 (AI Bundle)",
+      "pricing": {
+        "basic": {
+          "name": "Starter",
+          "title": "Simple Workflow",
+          "price": 97,
+          "del": "3 days",
+          "rev": "2",
+          "items": ["1 workflow (up to 5 nodes)", "2 app integrations", "Error handling", "Documentation"]
+        },
+        "standard": {
+          "name": "Business",
+          "title": "Multi-Step Workflow",
+          "price": 247,
+          "del": "6 days",
+          "rev": "3",
+          "items": ["1 workflow (up to 15 nodes)", "5 app integrations", "AI processing node", "Full docs + video"]
+        },
+        "premium": {
+          "name": "Enterprise",
+          "title": "Full Automation System",
+          "price": 497,
+          "del": "10 days",
+          "rev": "5",
+          "items": ["Up to 3 workflows", "Unlimited integrations", "Conditional logic + AI", "14 days support"]
+        }
+      },
+      "img": {
+        "bg1": "#030a0a",
+        "bg2": "#061818",
+        "accent": "#06b6d4",
+        "headline": "N8N AUTOMATION",
+        "sub": "AI-Powered Workflows + Integrations",
+        "badge": "50+ SYSTEMS BUILT",
+        "tools": ["n8n", "OpenAI", "Slack", "Sheets", "API"],
+        "pdfWhat": "Custom n8n automation systems with AI. Connect tools, automate data processing, and run operations on autopilot."
+      }
+    }
+  ]
+}

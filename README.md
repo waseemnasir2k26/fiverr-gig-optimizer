@@ -141,3 +141,31 @@ Built by [Waseem Nasir](https://www.skynetjoe.com) (Skynet Labs) using [Claude C
 ## License
 
 MIT — Use it, modify it, make money with it.
+
+---
+
+<!-- SEO-HIRE-ME-BLOCK -->
+
+## Hire Me
+
+> **Need a Claude Code skill or AI agent for your business?**
+
+I'm **Waseem Nasir** — founder of [Skynet Labs / SkynetJoe](https://www.skynetjoe.com), an AI Automation Agency. Custom Claude Code skills, AI agents, GPT-4/Claude/Gemini integrations.
+
+**50+ live projects across:** Healthcare · Legal · Real Estate · E-Commerce · Logistics · HVAC · SaaS · Consulting
+
+### Hire me
+- 📅 **[Book a free strategy call](https://calendly.com/skynetlabs/schedule-a-free-consultation)**
+- 💼 **[Hire on Fiverr](https://fiverr.com/agencies/skynetjoellc)**
+- 🌐 **[skynetjoe.com](https://www.skynetjoe.com)**
+- 📧 **info@skynetjoe.com**
+- 💬 **[WhatsApp](https://wa.me/923001001957)**
+
+### Related projects on my GitHub
+- [ai-motivational-posts](https://github.com/waseemnasir2k26/ai-motivational-posts)
+- [ai-video-editor](https://github.com/waseemnasir2k26/ai-video-editor)
+- [aeo-content-engine](https://github.com/waseemnasir2k26/aeo-content-engine)
+- [→ See all 50+ projects](https://github.com/waseemnasir2k26)
+
+### Tags
+`AI automation` · `n8n` · `GoHighLevel` · `Claude Code` · `Next.js` · `React` · `Python` · `freelance` · `hire me` · `agency`

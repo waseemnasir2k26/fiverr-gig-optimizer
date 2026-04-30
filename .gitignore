@@ -1,6 +1,8 @@
 # Generated output
 fiverr-catalog.html
 gig-config.json
+pdfs/
+test-pdfs/
 
 # User photos (don't commit personal photos)
 *.png

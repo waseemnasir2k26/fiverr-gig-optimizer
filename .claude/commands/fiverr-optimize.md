@@ -140,21 +140,31 @@ Create a `gig-config.json` file in the project root with this structure:
 - Green: `#1DBF73` (bg: `#030a05` / `#061a0e`)
 - Lime: `#84cc16` (bg: `#050a03` / `#101a06`)
 
-### Step 4: Build the Catalog
+### Step 4: Build the Catalog + PDFs
 
-After creating `gig-config.json`, run the build script:
+After creating `gig-config.json`, run BOTH build scripts:
 
 ```bash
-python build-catalog.py
+python build-catalog.py    # Generates fiverr-catalog.html (catalog + thumbnails)
+python build-pdfs.py       # Generates editorial PDFs into pdfs/ (one per gig)
 ```
 
-This generates `fiverr-catalog.html` — a single HTML file with:
+`build-catalog.py` produces `fiverr-catalog.html` — a single HTML file with:
 - Professional canvas thumbnails (1280x769px, Fiverr recommended)
-- Copy-paste ready titles, descriptions, and tags
+- Copy-paste ready titles, descriptions, and tags (full multi-line desc copy)
 - Download PNG buttons for each thumbnail
-- PDF export for each gig
+- Per-gig PDF download link (points at `pdfs/`)
 - Cross-sell funnel diagram
 - Action plan checklist
+
+`build-pdfs.py` produces editorial-design A4 PDFs (one per gig) in `pdfs/`:
+- Dark plum gradient cover page (#1a0a24 → #4a0e5e), huge gig number, phase pill, big serif title
+- Bone-cream content sheet (#FAF6F0), Fraunces serif headers, Inter body
+- White pricing cards, STANDARD inverted dark w/ "RECOMMENDED" pink pill
+- Magenta-accent FAQ blocks
+- Brand header + footer running on each page
+
+Requires Google Chrome or Microsoft Edge installed (auto-detected on Windows / macOS / Linux).
 
 ### Step 5: Open and Review
 

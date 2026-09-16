@@ -2,6 +2,10 @@
 
 **AI-powered Claude Code skill that generates a complete Fiverr gig strategy** — optimized titles, descriptions, tags, pricing, professional thumbnails, and cross-sell funnels.
 
+## Status
+
+Last reviewed: September 2026 · release v2026.09
+
 You tell it your services. It researches competition, finds blue-ocean combo-niches, and generates everything you need to dominate Fiverr.
 
 ## What You Get

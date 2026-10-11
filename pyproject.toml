@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fiverr-gig-optimizer"
+version = "2.0.0"
+description = "Offline Fiverr gig optimizer CLI: gig audit score, message filter lint, 20% fee pricing calculator, tag helper, plus a Claude Code skill."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Waseem Nasir", email = "waseemhome8@gmail.com" }]
+keywords = ["fiverr", "fiverr-seo", "gig-optimizer", "freelancing", "claude-code", "cli"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Environment :: Console",
+  "Topic :: Office/Business",
+]
+dependencies = []
+
+[project.optional-dependencies]
+yaml = ["PyYAML>=6"]
+dev = ["pytest>=7", "PyYAML>=6"]
+
+[project.scripts]
+fiverr-gig = "fiverr_gig.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/waseemnasir2k26/fiverr-gig-optimizer"
+
+[tool.setuptools]
+packages = ["fiverr_gig"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

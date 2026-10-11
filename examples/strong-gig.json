@@ -1,0 +1,75 @@
+{
+  "title": "I will build n8n automations to connect your tools",
+  "category": "Programming & Tech > AI Coding",
+  "tags": [
+    "n8n automation",
+    "workflow automation",
+    "n8n developer",
+    "api integration",
+    "business automation"
+  ],
+  "description": "I build n8n automations that connect the tools you already use, so repetitive work runs without you.\n\nWhat you get:\n- A working workflow built and tested on your data\n- Error handling and retry logic so it does not fail silently\n- A short written guide so your team can maintain it\n- Optional AI step (classify, summarise, draft) inside the flow\n\nHow it works: you describe the manual process, I map it, build it, and walk you through a test run before delivery.\n\nNot sure which package fits? Message me here with your tools and the task, and I will recommend one before you order.",
+  "packages": {
+    "basic": {
+      "name": "Starter",
+      "price": 60,
+      "days": 3,
+      "revisions": 2,
+      "items": [
+        "1 workflow, up to 5 nodes",
+        "2 app integrations",
+        "Setup notes"
+      ]
+    },
+    "standard": {
+      "name": "Business",
+      "price": 150,
+      "days": 5,
+      "revisions": 3,
+      "items": [
+        "1 workflow, up to 15 nodes",
+        "5 app integrations",
+        "Error handling and retries",
+        "Written guide"
+      ]
+    },
+    "premium": {
+      "name": "Full system",
+      "price": 320,
+      "days": 9,
+      "revisions": 5,
+      "items": [
+        "Up to 3 linked workflows",
+        "Unlimited integrations",
+        "AI step included",
+        "Error alerts",
+        "Walkthrough video"
+      ]
+    }
+  },
+  "faq": [
+    {
+      "q": "Which tools can you connect?",
+      "a": "Anything with an API or a webhook. If n8n has a node for it, it is quick; if not, I use the HTTP request node."
+    },
+    {
+      "q": "Do I need my own n8n server?",
+      "a": "No. I can build on n8n Cloud or on your self-hosted instance. Tell me which you use in the order requirements."
+    },
+    {
+      "q": "What if the workflow breaks later?",
+      "a": "Revisions cover fixes to what I built within the package limits. Bigger changes can be a new order."
+    }
+  ],
+  "requirements": [
+    "Please describe the manual process you want automated, step by step.",
+    "Which apps are involved, and do you use n8n Cloud or self-hosted?",
+    "Please share example data (with private details removed)."
+  ],
+  "images": [
+    { "type": "image", "width": 1280, "height": 769 },
+    { "type": "image", "width": 1280, "height": 769 },
+    { "type": "video" },
+    { "type": "pdf" }
+  ]
+}

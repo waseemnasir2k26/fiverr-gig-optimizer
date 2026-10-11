@@ -1,0 +1,53 @@
+{
+  "title": "I will design a clean logo and brand kit for your small business",
+  "category": "Graphics & Design > Logo Design",
+  "tags": [
+    "logo design",
+    "brand kit",
+    "small business logo",
+    "minimal logo",
+    "brand identity",
+    "extra tag"
+  ],
+  "description": "I design simple, memorable logos for small businesses and give you the files to use them everywhere.\n\n- 3 initial concepts\n- Transparent PNG and vector files\n- Colour and font guide\n\nOrder a package, send your brief, and I will start straight away.",
+  "packages": {
+    "basic": {
+      "name": "Logo",
+      "price": 35,
+      "days": 2,
+      "revisions": 2,
+      "items": ["1 concept", "PNG file"]
+    },
+    "standard": {
+      "name": "Logo plus",
+      "price": 90,
+      "days": 4,
+      "revisions": 4,
+      "items": ["3 concepts", "PNG and vector files", "Colour guide"]
+    },
+    "premium": {
+      "name": "Brand kit",
+      "price": 190,
+      "days": 6,
+      "revisions": 6,
+      "items": [
+        "5 concepts",
+        "PNG and vector files",
+        "Colour and font guide",
+        "Social media avatars"
+      ]
+    }
+  },
+  "faq": [
+    {
+      "q": "Which file types do I receive?",
+      "a": "PNG with a transparent background on every package, plus vector files from Standard up."
+    },
+    {
+      "q": "Can I request changes?",
+      "a": "Yes, within the number of revisions shown on your package."
+    }
+  ],
+  "requirements": ["What is your business name and what do you do?"],
+  "images": [{ "type": "image", "width": 1280, "height": 769 }]
+}

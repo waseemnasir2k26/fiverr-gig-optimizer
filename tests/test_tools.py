@@ -352,4 +352,14 @@ def test_cli_keywords_json(capsys):
 
 
 def test_version_string():
-    assert __version__ == "2.0.0"
+    assert __version__ == "2.0.1"
+
+
+def test_titles_skip_verb_already_in_seed():
+    titles = [t["title"] for t in keywords.suggest_titles("logo design")]
+    assert titles and not any(t.startswith("I will design ") for t in titles)
+
+
+def test_cli_keywords_unquoted_multiword_seed(capsys):
+    assert main(["keywords", "logo", "design", "--json"]) == 0
+    assert '"seed": "logo design"' in capsys.readouterr().out

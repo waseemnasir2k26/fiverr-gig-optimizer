@@ -90,6 +90,8 @@ def cmd_price(a: argparse.Namespace) -> int:
 
 
 def cmd_keywords(a: argparse.Namespace) -> int:
+    if isinstance(a.seed, list):
+        a.seed = " ".join(a.seed)
     try:
         res = keywords.build(a.seed)
     except ValueError as e:
@@ -162,7 +164,7 @@ def build_parser() -> argparse.ArgumentParser:
     s.set_defaults(fn=cmd_price)
 
     s = sub.add_parser("keywords", help="tag and title ideas from a seed niche")
-    s.add_argument("seed")
+    s.add_argument("seed", nargs="+", help="seed niche; quotes optional (keywords logo design)")
     s.add_argument("--llm", action="store_true", help="also ask an OpenAI-compatible endpoint (needs FIVERR_GIG_LLM_* env vars)")
     s.add_argument("--json", action="store_true")
     s.set_defaults(fn=cmd_keywords)

@@ -2,6 +2,14 @@
 
 All notable changes to this project are documented in this file.
 
+## [2.0.1] - 2026-10-12
+
+### Fixed
+- `keywords` accepts an unquoted multi-word seed (`fiverr-gig keywords logo design`), as shown in the README demo; previously it exited with "unrecognized arguments".
+- Title drafts skip a verb already in the seed (no more "I will design logo design").
+- Removed the personal email from package metadata.
+- 2 new tests (53 total).
+
 ## [2.0.0] - 2026-10-12
 
 Adds a real, tested, offline CLI. Existing tools (`build-catalog.py`, `build-pdfs.py`, `/fiverr-optimize`) are unchanged in behaviour.

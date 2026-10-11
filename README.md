@@ -1,6 +1,6 @@
 # Fiverr Gig Optimizer: free Fiverr SEO audit, gig tool and Claude Code skill
 
-[![tests](https://img.shields.io/badge/tests-51%20passing-brightgreen.svg)](tests/test_tools.py)
+[![tests](https://img.shields.io/badge/tests-53%20passing-brightgreen.svg)](tests/test_tools.py)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Python 3.10 | 3.11 | 3.12](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue.svg)](pyproject.toml)
 
@@ -30,7 +30,7 @@ Audit your own gig: copy `examples/strong-gig.json` (or the Markdown example), r
 | `fiverr-gig audit FILE`                 | Scores a gig 0-100 across title, tags, description, packages, FAQ, requirements and images, and prints specific fixes. Reads JSON, YAML or Markdown.                                       | yes                      |
 | `fiverr-gig lint`                       | Flags off-platform contact and payment words (email, pay, Discord, WhatsApp, URLs, handles, phone numbers) with safer wording. Calls out disguised spellings as worse than the plain word. | yes                      |
 | `fiverr-gig price`                      | Net after Fiverr's 20% seller fee, the sticker price to quote for a net target, a Basic/Standard/Premium ladder, and net hourly rate.                                                      | yes                      |
-| `fiverr-gig keywords SEED`              | Tag candidates (each 20 characters or fewer) and title drafts from a seed niche. Optional LLM extras with `--llm` if you set `FIVERR_GIG_LLM_*` variables. Off by default.                 | yes (LLM optional)       |
+| `fiverr-gig keywords SEED`              | Tag candidates (each 20 characters or fewer) and title drafts from a seed niche (quotes around a multi-word seed are optional). Optional LLM extras with `--llm` if you set `FIVERR_GIG_LLM_*` variables. Off by default.                 | yes (LLM optional)       |
 | `fiverr-gig rules`                      | Prints the limits the tools check. Sources in [docs/fiverr-rules-2026.md](docs/fiverr-rules-2026.md).                                                                                      | yes                      |
 | `/fiverr-optimize`                      | Claude Code skill: interviews you, researches combo niches, writes a full multi-gig strategy and `gig-config.json`, then calls the audit.                                                  | needs Claude Code        |
 | `/fiverr-audit`, `/fiverr-message-lint` | Claude Code commands that run the CLI and rewrite until the audit and lint are clean.                                                                                                      | needs Claude Code        |
@@ -102,6 +102,12 @@ All candidates:
   design expert          13 chars
   design freelancer      17 chars
   design professional    19 chars
+Title drafts:
+  I will build logo design  (24)
+  I will set up logo design  (25)
+  I will create logo design  (25)
+  I will fix logo design  (22)
+  I will automate logo design  (27)
 ```
 
 The example gigs are fictional and exist to exercise the tool. Scores in this README are what the code prints; they are not claims about any real gig.

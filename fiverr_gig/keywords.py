@@ -79,6 +79,8 @@ def suggest_titles(seed: str, limit: int = 5) -> list[dict]:
     base = " ".join(toks)
     out = []
     for v in _VERBS:
+        if v in toks:  # avoid "I will design logo design"
+            continue
         t = f"I will {v} {base}"
         if len(t) <= rules.TITLE_MAX:
             out.append(t)

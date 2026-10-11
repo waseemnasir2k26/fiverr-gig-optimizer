@@ -4,12 +4,12 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fiverr-gig-optimizer"
-version = "2.0.0"
+version = "2.0.1"
 description = "Offline Fiverr gig optimizer CLI: gig audit score, message filter lint, 20% fee pricing calculator, tag helper, plus a Claude Code skill."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
-authors = [{ name = "Waseem Nasir", email = "waseemhome8@gmail.com" }]
+authors = [{ name = "Waseem Nasir" }]
 keywords = ["fiverr", "fiverr-seo", "gig-optimizer", "freelancing", "claude-code", "cli"]
 classifiers = [
   "Programming Language :: Python :: 3",

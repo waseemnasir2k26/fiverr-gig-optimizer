@@ -31,7 +31,7 @@ Once you have the info, do DEEP research:
    - **Bad gigs DRAG DOWN good gigs** — only create gigs you can deliver excellently
    - **5 reviews = critical threshold** for algorithm visibility
    - **Response time under 1 hour** is a critical algorithm signal
-   - **Thumbnails with face = 25-40% higher CTR**
+   - **Thumbnails with a clear face and bold headline** are widely recommended by sellers (a rule of thumb, not a measured Fiverr statistic)
 
 3. **Phase-Based Rollout**:
    - **Phase 1 (Launch Now)**: 3-4 gigs targeting lowest-competition combo-niches
@@ -140,6 +140,22 @@ Create a `gig-config.json` file in the project root with this structure:
 - Green: `#1DBF73` (bg: `#030a05` / `#061a0e`)
 - Lime: `#84cc16` (bg: `#050a03` / `#101a06`)
 
+### Step 3b: Audit every gig with the CLI (do not skip)
+
+Install once: `pip install -e .` in this repo (gives the `fiverr-gig` command; it is offline and needs no API key).
+
+```bash
+fiverr-gig audit gig-config.json --min-score 85     # scores every gig 0-100 with specific fixes
+fiverr-gig price --ladder 60                          # sanity-check the Basic/Standard/Premium ladder
+fiverr-gig keywords "<seed niche>"                    # tag + title candidates to compare with your picks
+```
+
+Rules for this step:
+- Fix every item the audit lists, edit `gig-config.json`, and re-run until each gig scores 85+. Report the final scores to the user as they are; never round up.
+- Quote prices GROSS. Fiverr keeps 20%, so to net N the sticker is N / 0.80 (`fiverr-gig price --net N`).
+- Any buyer-facing message you draft (gig description, FAQ, welcome message) must pass `fiverr-gig lint --text "..."` with no findings. Never help move a buyer off Fiverr.
+- The audit measures form, not rank. Do not tell the user a high score will get them orders.
+
 ### Step 4: Build the Catalog + PDFs
 
 After creating `gig-config.json`, run BOTH build scripts:
@@ -194,15 +210,15 @@ Walk them through:
 
 Share these with the user:
 
-- **CTR is king** — Thumbnail + title determine 80% of gig success
-- **Face in thumbnail** = 25-40% higher CTR
+- **CTR matters** — Thumbnail + title are what buyers see in search; test them
+- **Face in thumbnail** — commonly recommended by sellers; unverified as a percentage
 - **Dark background + bright accent** = highest performing thumbnail style
 - **First 2 weeks** matter most — Fiverr boosts new gigs
-- **Combo keywords** (e.g., "n8n + AI") have 10-100x less competition
+- **Combo keywords** (e.g., "n8n + AI") usually face far fewer competing gigs (check the result count on Fiverr search yourself)
 - **Same category gigs** share traffic signals (algorithm reward)
 - **Bad gigs hurt good gigs** — delete underperformers immediately
 - **Buyer request responses** are the fastest way to get first orders
-- **Gig video** adds +30% impressions and 2x orders
+- **Gig video** — fills a gallery slot most sellers leave empty; no verified lift figure
 - **FAQ section** on every gig = more conversions + less messages
 
 ## ERROR HANDLING
